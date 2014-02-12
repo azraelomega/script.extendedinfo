@@ -172,7 +172,7 @@ def GetSimilarArtistsInLibrary(id):
                              "Style"       : " / ".join(item['style']),
                              "Mood"        : " / ".join(item['mood']),
                              "Instrument"  : " / ".join(item['instrument']),
-                             "LibraryPath" : 'musicdb://2/' + str(item['artistid']) + '/' }                         
+                             "LibraryPath" : 'musicdb://artists/' + str(item['artistid']) + '/' }                         
                 artists.append(newartist)
                 log(newartist)
     log('%i of %i artists found in last.FM is in XBMC database' % (len(artists), len(simi_artists)))
