@@ -652,7 +652,7 @@ class Main:
                 self.selecteditem = xbmc.getInfoLabel("ListItem.DBID")
                 if (self.selecteditem != self.previousitem):
                     self.previousitem = self.selecteditem
-                    if xbmc.getCondVisibility("!IsEmpty(ListItem.DBID) + [SubString(ListItem.Path,videodb://1/7/,left)| Container.Content(artists) | Container.Content(albums)]"):
+                    if xbmc.getCondVisibility("!IsEmpty(ListItem.DBID) + [SubString(ListItem.Path,videodb://movies/sets/,left)| Container.Content(artists) | Container.Content(albums)]"):
                         self._set_details(xbmc.getInfoLabel("ListItem.DBID"))
                         log("setting movieset labels")
                     else:
